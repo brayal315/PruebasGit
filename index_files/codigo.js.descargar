@@ -1,0 +1,50 @@
+class celular{
+
+	constructor(color,peso,rdp,ram,rdc){
+
+		this.color = color;
+		this.peso = peso;
+		this.rdp = rdp;
+		this.ram = ram; 
+		this.rdc = rdc;
+		this.encendido = false;
+	}
+
+	prender(){
+		//Es importante usar el this dentro de una clase para que esta
+		//pueda funcionar
+		if(this.encendido == false){
+			alert("El celular se esta prendiendo");
+			this.encendido = true;
+		}
+		else(){
+			alert("El celular esta apagando")
+			this.encendido = false;
+		}
+	}
+
+	reiniciar(){
+		if(this.encendido == true){
+			alert("se esta reniciando :0")
+		}
+		else(){
+			alert("esta apagado xd no se puede")
+		}
+
+	}
+	//recuerda que tienes que suar el this dentro de la clase XD
+	tomarFoto(){
+		alert(`foto tomada en resolucion ${this.rdc}`)
+
+	}
+
+	grabar(){
+		alert(`se esta grabando en ${this.rdc}`)		
+	}
+
+}
+
+celular1 = new celular("verde","15gr","15Px","4RAM","16mpx");
+celular2 = new celular("rojo","12gr","12Px","3RAM","11mpx");
+celular3 = new celular("negro","18gr","18Px","5RAM","17mpx");
+celular1.prender();
